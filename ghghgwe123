@@ -1,0 +1,17 @@
+using UnityEngine;
+
+public class MainMenu : MonoBehaviour  
+{
+    public GameObject rectPrefab; // 矩形预制体
+
+    private void Start()  
+    {  
+        // 创建矩形预制体  
+        var rect = Instantiate(rectPrefab, new Vector3(100, 100, 0), Quaternion.identity).GetComponent<RectTransform>();  
+        rect.rect.width = 100;  
+        rect.rect.height = 100;
+
+        // 设置矩形的颜色为红色  
+        rect.color = new Color(rect.color.r, rect.color.g, rect.color.b, 1f);  
+    }  
+}
